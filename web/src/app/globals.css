@@ -1,0 +1,66 @@
+@import "tailwindcss";
+
+/* ---------- Base ---------- */
+:root {
+  color-scheme: light;
+}
+
+.dark {
+  color-scheme: dark;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  @apply bg-white text-neutral-900 antialiased;
+}
+
+.dark body {
+  @apply bg-neutral-950 text-neutral-50;
+}
+
+/* ---------- Utility components ---------- */
+@layer components {
+  .container-app {
+    @apply mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8;
+  }
+
+  .glass {
+    @apply border border-white/10 bg-white/60 backdrop-blur-xl;
+  }
+
+  .dark .glass {
+    @apply border-white/10 bg-white/5;
+  }
+
+  .card {
+    @apply rounded-2xl shadow-[0_10px_30px_-12px_rgba(0,0,0,0.25)];
+  }
+
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-xl px-4 py-2 text-sm font-semibold transition active:scale-[0.99] disabled:cursor-not-allowed disabled:opacity-60;
+  }
+
+  .btn-primary {
+    @apply bg-neutral-900 text-white hover:bg-neutral-800;
+  }
+
+  .dark .btn-primary {
+    @apply bg-white text-neutral-950 hover:bg-neutral-200;
+  }
+
+  .btn-ghost {
+    @apply bg-white/60 text-neutral-900 hover:bg-white/80;
+  }
+
+  .dark .btn-ghost {
+    @apply bg-white/10 text-white hover:bg-white/15;
+  }
+
+  .badge {
+    @apply rounded-full px-3 py-1 text-xs font-semibold;
+  }
+}
