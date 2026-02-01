@@ -64,3 +64,31 @@ body {
     @apply rounded-full px-3 py-1 text-xs font-semibold;
   }
 }
+
+
+/* =========================================================
+   Best-practice theme text utilities
+   Light: black text
+   Dark: white text
+   ========================================================= */
+@layer utilities {
+  /* Primary readable text */
+  .text-primary {
+    @apply text-black dark:text-white;
+  }
+
+  /* Secondary / muted text */
+  .text-secondary {
+    @apply text-neutral-700 dark:text-neutral-300;
+  }
+
+  /* Helper / hint text */
+  .text-hint {
+    @apply text-neutral-500 dark:text-neutral-400;
+  }
+
+  /* Placeholder text (inputs/textareas) */
+  .placeholder-hint {
+    @apply placeholder:text-neutral-500 dark:placeholder:text-neutral-400;
+  }
+}

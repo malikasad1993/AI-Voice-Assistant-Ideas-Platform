@@ -4,6 +4,9 @@ from fastapi import FastAPI, UploadFile, File, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 import uuid
 import os
+from dotenv import load_dotenv
+load_dotenv()
+
 
 from .schemas import (
     TranscribeResponse,
